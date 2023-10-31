@@ -1,23 +1,24 @@
-import styled from "styled-components";
-
-const Banner = () => {
+const Banner = ({ scrollHome, scrollToRef }) => {
   return (
-    <div className="md:flex md:items-center md:justify-center flex-col h-screen relative">
+    <div
+      ref={scrollHome}
+      className="flex items-center justify-center flex-col h-screen relative"
+    >
       <div className="space-y-2 text-center m-auto max-w-6xl">
-        <p className="text-gray-500 text-lg">Hello.</p>
+        <p className="text-gray-500 text-lg">Hola.</p>
         <h2 className="text-6xl font-bold text-indigo-700">
-          I Am Cristian Pereira
+          Soy Cristian Pereira
         </h2>
-        <p className="text-gray-500 text-lg">Freelance web Developer</p>
-        <a
-          href="#"
+        <p className="text-gray-500 text-lg">Desarrollador web freelance</p>
+        <button
+          onClick={() => scrollToRef("contact")}
           className="bg-indigo-700 hover:bg-indigo-600 transition-all p-2 inline-block rounded text-white"
         >
-          Contact Me!
-        </a>
+          Hablemos
+        </button>
       </div>
       <svg
-        className="absolute bottom-0"
+        className="absolute bottom-0 -z-10"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
       >

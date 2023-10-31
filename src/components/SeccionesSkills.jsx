@@ -2,9 +2,9 @@ const SeccionesSkills = ({ seccion }) => {
   const { titulo, contenido } = seccion;
 
   return (
-    <div className="bg-indigo-700 py-10 px-10 text-white first:rounded-l-lg last:rounded-r-lg">
+    <div className="bg-indigo-700 py-10 px-10 text-white lg:first:rounded-l-lg lg:last:rounded-r-lg sm:last:col-span-2 lg:last:col-span-1">
       <h3 className="text-center mb-4 text-xl">{titulo}</h3>
-      <div className="flex flex-wrap justify-center gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 gap-2">
         {contenido.map((icono, keyIcon) => (
           <div
             key={keyIcon}
